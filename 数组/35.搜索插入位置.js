@@ -15,10 +15,10 @@ var searchInsert = function(nums, target) {
   while(left <= right) {
     let middle = left + Math.floor((right - left) / 2);
     if(nums[middle] > target) {
-      right = middle - 1;
+      right = middle - 1;  //target在左区间，所以[left,middle - 1]
     }else if(nums[middle] < target) {
-      left = middle + 1;
-    }else {
+      left = middle + 1;  //target在右区间，所以[middle + 1,right]
+    }else {  // nums[middle] == target
       return middle;
     }
   }
