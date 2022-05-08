@@ -45,32 +45,32 @@
 // };
 
 var hasPathSum = function(root, targetSum) {
-  let sum = 0;
+let sum = 0;
 
-  var getPathSum = function(root, sum) {
-    if(!root.left && !root.right) {
-          sum += root.val;
-          if(sum === targetSum) {
-              return true;
-          }else {
-              return false;
-          }
-      }
+var getPathSum = function(root, sum) {
+if(!root.left && !root.right) {
+        sum += root.val;
+        if(sum === targetSum) {
+            return true;
+        }else {
+            return false;
+        }
+    }
 
-      sum += root.val;
-      if(root.left) {
-          if(getPathSum(root.left, sum)) return true;
-      }
-      if(root.right){
-          if(getPathSum(root.right, sum)) return true;
-      }
+    sum += root.val;
+    if(root.left) {
+        if(getPathSum(root.left, sum)) return true;
+    }
+    if(root.right){
+        if(getPathSum(root.right, sum)) return true;
+    }
 
-      return false;
-  }
+    return false;
+}
 
-  if(!root) return false;
+if(!root) return false;
 
-  return getPathSum(root, sum);
+return getPathSum(root, sum);
 
 };
 // @lc code=end
