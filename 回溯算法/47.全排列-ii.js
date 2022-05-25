@@ -23,8 +23,12 @@ var permuteUnique = function(nums) {
 
     for(let i = 0;i < len;i++) {
       const n = nums[i];
+      // used[i - 1] == true，说明同⼀树⽀nums[i - 1]使⽤过
+      // used[i - 1] == false，说明同⼀树层nums[i - 1]使⽤过
+      // 如果同⼀树层nums[i - 1]使⽤过则直接跳过
       if(i > 0 && n === nums[i-1] && !used[i-1]) continue;
 
+      //如果同⼀树⽀nums[i]没使⽤过开始处理
       if(!used[i]) {
         used[i] = true;
         path.push(n);

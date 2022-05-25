@@ -31,7 +31,7 @@ var partition = function(s) {
 
     for(let j = i;j < len;j++) {
       if(!isPalindrome(s, i , j)) continue;// 是回文子串,如果不是则直接跳过
-      path.push(s.substr(i, j - i + 1));
+      path.push(s.substr(i, j - i + 1)); //substr(从哪开始取，取几个)
       backTracking(j + 1);//寻找j+1为起始位置的子串
       path.pop();// 回溯过程，弹出本次已经填在的子串
     }
