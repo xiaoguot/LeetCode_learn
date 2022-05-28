@@ -19,8 +19,6 @@ var integerBreak = function(n) {
     }
   }
 
-
-
   return dp[n];
 };
 // @lc code=end
