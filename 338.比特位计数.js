@@ -11,7 +11,7 @@
  */
 
 /*
-Brian Kernighan 算法的原理是：对于任意整数 xx，令 x=x~\&~(x-1)x=x & (x−1)，该运算将 xx 的二进制表示的最后一个 11 变成 00。因此，对 xx 重复该操作，直到 xx 变成 00，则操作次数即为 xx 的「一比特数」。
+Brian Kernighan 算法的原理是：对于任意整数 x，令 x=x & (x−1)，该运算将 x 的二进制表示的最后一个 1 变成 0。因此，对 x 重复该操作，直到 x 变成 0，则操作次数即为 x 的「一比特数」。
  */
 var countBits = function(n) {
     const bits = new Array(n + 1).fill(0);
