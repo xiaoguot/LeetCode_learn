@@ -36,7 +36,7 @@ var searchRange = function(nums, target) {
     let leftBorder = -2;  // 记录一下leftBorder没有被赋值的情况
 
     while(left <= right) {
-      const middle = left + Math.floor((right - left)/2);
+      const middle = left + Math.floor((right - left)/2); 
 
       if(nums[middle] < target) {
         left = middle + 1;
