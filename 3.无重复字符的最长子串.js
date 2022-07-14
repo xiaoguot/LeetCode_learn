@@ -26,8 +26,6 @@ var lengthOfLongestSubstring = function(s) {
     map.set(s[r], r);
   }
 
-
-
   return res;
 
 };
