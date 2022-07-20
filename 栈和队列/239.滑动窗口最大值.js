@@ -58,7 +58,7 @@ var maxSlidingWindow = function(nums, k) {
   }
 
   let helperQueue = new MonoQueue();
-  let i, j = 0;
+  let i = 0, j = 0;
   let resArr = [];
 
   while(j < k) {
